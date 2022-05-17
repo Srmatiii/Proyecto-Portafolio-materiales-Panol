@@ -1,1 +1,19 @@
-<p>editar-categoria works!</p>
+<div class="card">
+    <div class="card-header">
+        Editar Categoria
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre de la Categoria</label>
+              <input type="text" name="Nombre" [(ngModel)]= "Nombre"
+                class="form-control"  aria-describedby="helpId" placeholder="Escribe el nombre del producto">
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="button" class="btn btn-success" (click)="preUpdateCategoria()">Update</button>
+                <button type="button" class="btn btn-danger">Volver</button>
+            </div>
+        </form>
+    </div>
+</div>

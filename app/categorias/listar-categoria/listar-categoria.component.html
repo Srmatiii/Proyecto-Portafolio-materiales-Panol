@@ -17,9 +17,9 @@
                     <td> {{cat.Id}} </td>
                     <td> {{cat.Nombre}} </td>
                     <td>
-                         <a routerLink= "/editar-categorias/{{cat.Id}}">Editar</a>
+                         <a routerLink= "/categorias/editar-categoria/{{cat.Id}}">Editar</a>
                         <td> <div class="d-grid gap-2">
-                        <button type="button" class="btn-sm btn-danger">Eliminar </button>
+                        <button type="button" class="btn-sm btn-danger" (click)="deleteCategoria(cat.Id)">Eliminar </button>
                         </div></td>
                 </tr>
             </tbody>

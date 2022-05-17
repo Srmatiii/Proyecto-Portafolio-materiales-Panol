@@ -21,7 +21,7 @@ export class CrudService {
     return this.http.post(`${this.url}SubirProd.php`, JSON.stringify(producto));
   }
 
-  editarProd(producto: Producto){
+  editarProd(producto: IProductoCategoria){
     return this.http.put(`${this.url}EditarProd.php`, JSON.stringify(producto));
   }
   

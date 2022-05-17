@@ -11,12 +11,12 @@ export class ListarCategoriaComponent implements OnInit {
 
   categorias : Array<Categoria>;
 
-  constructor(private service: CategoriaCrudService) {
+  constructor(private categoriaService: CategoriaCrudService) {
     this.categorias = new Array<Categoria>();
    }
 
    buscarCategorias(): void{
-    this.service.mostrarCategoria().subscribe((resp: any)=>{
+    this.categoriaService.mostrarCategoria().subscribe((resp: any)=>{
       this.categorias = resp;
       console.log(this.categorias);
     })
@@ -24,6 +24,13 @@ export class ListarCategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.buscarCategorias();
+  }
+
+  deleteCategoria(id_categoria: number): void{
+    this.categoriaService.eliminarCategoria(id_categoria).subscribe((resp: any)=>{
+      console.log(resp);
+      this.buscarCategorias();
+    })
   }
 
 }

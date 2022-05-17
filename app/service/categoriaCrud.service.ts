@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Producto } from './producto';
+import { Categoria } from '../service/categoria';
 
 @Injectable({
   providedIn: 'root'
@@ -15,20 +15,20 @@ export class CategoriaCrudService {
     return this.http.get(`${this.url}mostrarCategorias.php`);
   }
 
-  // subirProd(producto: Producto){
-  //   return this.http.post(`${this.url}SubirProd.php`, JSON.stringify(producto));
-  // }
+  subirCategoria(categoria: Categoria){
+    return this.http.post(`${this.url}subirCategoria.php`, JSON.stringify(categoria));
+  }
 
-  // editarProd(producto: Producto){
-  //   return this.http.put(`${this.url}EditarProd.php`, JSON.stringify(producto));
-  // }
+  editarProd(categoria: Categoria){
+    return this.http.put(`${this.url}editarCategoria.php`, JSON.stringify(categoria));
+  }
   
-  // eliminarProd(id_producto: number) {
-  //   return this.http.delete(`${this.url}BorrarProd.php?id_producto=${id_producto}`);
-  // }
+  eliminarCategoria(id_categoria: number) {
+    return this.http.delete(`${this.url}borrarCategoria.php?id_categoria=${id_categoria}`);
+  }
 
-  // seleccionarProd(id_producto: number) {
-  //   return this.http.get(`${this.url}SeleccionarProd.php?id_producto=${id_producto}`);
-  // }
+  seleccionarCategoria(id_categoria: number) {
+    return this.http.get(`${this.url}seleccionarCategoria.php?id_categoria=${id_categoria}`);
+  }
 
 }

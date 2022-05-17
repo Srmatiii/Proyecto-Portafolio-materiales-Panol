@@ -7,6 +7,7 @@ import { AgregarProductoComponent } from './productos/agregar-producto/agregar-p
 import { ListarProductoComponent } from './productos/listar-producto/listar-producto.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
 
+import { CategoriasComponent } from './categorias/categorias.component'
 import { AgregarCategoriaComponent } from './categorias/agregar-categoria/agregar-categoria.component';
 import { EditarCategoriaComponent } from './categorias/editar-categoria/editar-categoria.component';
 import { ListarCategoriaComponent } from './categorias/listar-categoria/listar-categoria.component'
@@ -19,9 +20,10 @@ const routes: Routes = [
   {path: 'productos/agregar-producto', component:AgregarProductoComponent},
   {path: 'productos/listar-producto', component:ListarProductoComponent},
   {path: 'productos/editar-producto/:id', component:EditarProductoComponent},
-  {path: 'agregar-categoria', component:AgregarCategoriaComponent},
-  {path: 'listar-categoria', component:ListarCategoriaComponent},
-  {path: 'editar-categoria/:id', component:EditarCategoriaComponent},
+  {path: 'categorias', component:CategoriasComponent},
+  {path: 'categorias/agregar-categoria', component:AgregarCategoriaComponent},
+  {path: 'categorias/listar-categoria', component:ListarCategoriaComponent},
+  {path: 'categorias/editar-categoria/:id', component:EditarCategoriaComponent},
 ];
 
 @NgModule({

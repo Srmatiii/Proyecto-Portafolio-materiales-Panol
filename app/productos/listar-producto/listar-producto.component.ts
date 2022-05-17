@@ -30,8 +30,6 @@ export class ListarProductoComponent implements OnInit {
     this.service.eliminarProd(id_producto).subscribe((resp: any)=>{
       console.log(resp);
       this.buscarProd();
-      // this.productos = resp;
-      // console.log(this.productos);
     })
   }
 
