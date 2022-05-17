@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+        Agregar producto
+    </div>
+    <div class="card-body">
+
+
+        <form [formGroup]="formularioDeProducto" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre del Producto</label>
+              <input type="text" [(ngModel)]= "Nombre"
+                class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe el nombre del producto">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Marca del Producto</label>
+                <input type="text" [(ngModel)]= "Marca"
+                  class="form-control" name="" formControlName="marca" id="" aria-describedby="helpId" placeholder="Escribe la marca del Producto">
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Stock del producto</label>
+                <input type="number" [(ngModel)]= "Stock"
+                  class="form-control" name="" formControlName="stock" id="" aria-describedby="helpId" placeholder="Escribe el Stock del producto">
+              </div>
+
+              <div class="btn-group" role="group" aria-label="">
+                  <button type="submit" class="btn btn-success" (click) = "prePost()">Agregar</button>
+                  <button type="submit" class="btn btn-danger">Eliminar</button>
+              </div>
+        </form>
+
+
+
+    </div>
+</div>
