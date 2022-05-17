@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header">
+        Agregar producto
+    </div>
+    <div class="card-body">
+
+
+        <form>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre del Producto</label>
+              <input type="text" name="Nombre" [(ngModel)]= "Nombre"
+                class="form-control"  aria-describedby="helpId" placeholder="Escribe el nombre del producto">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Marca del Producto</label>
+                <input type="text" name = "Marca" [(ngModel)]= "Marca"
+                  class="form-control"  aria-describedby="helpId" placeholder="Escribe la marca del Producto">
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Stock del producto</label>
+                <input type="number" name = "Stock" [(ngModel)]= "Stock"
+                  class="form-control" aria-describedby="helpId" placeholder="Escribe el Stock del producto">
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Categorias</label>
+                <select class="form-control"  #categoriaSelect>
+                    <option *ngFor=" let cat of categorias" 
+                    [value] = "cat.Id"
+                    [attr.selected]= "cat.Id === 1 ? '' : null">
+                        {{cat.Nombre}}
+                    </option>
+                </select>
+              </div>
+
+              <div class="btn-group" role="group" aria-label="">
+                  <button type="submit" class="btn btn-success" (click) = "prePost()">Agregar</button>
+                  <button type="submit" class="btn btn-danger">Eliminar</button>
+              </div>
+        </form>
+
+
+
+    </div>
+</div>

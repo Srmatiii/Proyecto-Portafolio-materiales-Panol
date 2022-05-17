@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Producto} from './producto';
+import { Producto } from './producto';
+import { IProductoCategoria } from '../interfaces/IProductoCategoria'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
 
-  url = 'http://localhost/crudAngular/';
+  url = 'http://localhost/crudAngular/CrudProducto/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   mostrarTodo(){
     return this.http.get(`${this.url}mostrarTodos.php`);
   }
 
-  subirProd(producto: Producto){
+  subirProd(producto: IProductoCategoria){
     return this.http.post(`${this.url}SubirProd.php`, JSON.stringify(producto));
   }
 

@@ -17,22 +17,6 @@ export class AppComponent {
     marca: ''
   }
 
-  constructor(private crudService: CrudService){}
-
-  // obtenerProductos() {
-  //   this.crudService.mostrarTodo().subscribe(
-  //     result => this.producto = result
-  //   );
-  // }
-
-  // altaUsuario() {
-  //   this.crudService.subirProd(this.producto).subscribe(
-  //     datos => {
-  //       if(datos['resultado'] == 'OK') {
-  //         alert(datos['mensaje']);
-  //         this.obtenerUsuarios();
-  //       }
-  //     }
-  //   );
+  constructor(){}
 }
 

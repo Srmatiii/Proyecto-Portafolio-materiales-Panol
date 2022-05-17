@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        Productos
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de la categoria</th>
+                    <th>Acciones </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <tr *ngFor="let cat of categorias">
+                    <td> {{cat.Id}} </td>
+                    <td> {{cat.Nombre}} </td>
+                    <td>
+                         <a routerLink= "/editar-categorias/{{cat.Id}}">Editar</a>
+                        <td> <div class="d-grid gap-2">
+                        <button type="button" class="btn-sm btn-danger">Eliminar </button>
+                        </div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
